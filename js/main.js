@@ -4,7 +4,14 @@ let precioGorras = 2000;
 let totalP = 0;
 let continuarComprando = true;
 
-alert("Bienvenidos a TodoModa. Por favor, elija los productos para agregar al carrito de compras.");
+function saludar() {
+    let nombre = prompt("Por favor, ingresa tu nombre:");
+    alert("Bienvenido/a a TodoModa " + nombre + " espero que compre a gusto :D")
+}
+saludar();
+
+alert("Por favor, elija los productos para agregar al carrito de compras.");
+
 
 while (continuarComprando) {
     const productoElegido = prompt("Ingrese el número del producto que desea comprar:\n1. Remeras\n2. Sudaderas\n3. Gorras\n\nSi desea finalizar la compra, por favor ingrese 0:");
@@ -31,5 +38,5 @@ while (continuarComprando) {
 }
 
 if (totalP > 0) {
-    const opcionFinal = confirm(`El total es de $${totalP}. Muchas gracias por su compra! Hasta luego!`);
+    const opcionFinal = confirm(`El total es de $${totalP}. Muchas gracias por su compra!`);
 }
